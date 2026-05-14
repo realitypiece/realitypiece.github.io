@@ -24,7 +24,6 @@
 html,body{width:100%;height:100%;overflow:hidden;background:#000;-webkit-font-smoothing:antialiased}
 body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 
-/* BG */
 #bg-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0}
 .grid-overlay{
   position:fixed;inset:0;z-index:1;
@@ -39,7 +38,6 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
   background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px);
 }
 
-/* SPLASH */
 #splash{
   position:fixed;inset:0;z-index:100;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -60,11 +58,9 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 .splash-text{font-family:'Orbitron',monospace;font-size:11px;letter-spacing:4px;color:#888;animation:pulse-text 1.5s ease-in-out infinite}
 @keyframes pulse-text{0%,100%{opacity:0.4}50%{opacity:1}}
 
-/* WRAPPER */
 #app{position:fixed;inset:0;z-index:10;display:flex;flex-direction:column;opacity:0;transition:opacity 0.8s ease}
 #app.show{opacity:1}
 
-/* TOP NAV TABS */
 #nav{
   display:flex;align-items:center;justify-content:center;
   padding:16px 20px 0;
@@ -85,7 +81,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
   transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);
   -webkit-tap-highlight-color:transparent;
   outline:none;
-  /* 3D effect */
+
   box-shadow:
     0 1px 0 rgba(255,255,255,0.06) inset,
     0 -1px 0 rgba(0,0,0,0.5) inset,
@@ -124,12 +120,9 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
   box-shadow:0 0 8px var(--accent);
 }
 
-/* PAGES */
 #pages{flex:1;overflow:hidden;position:relative}
 .page{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.35s ease}
 .page.active{opacity:1;pointer-events:all}
-
-/* ── HOME PAGE ── */
 .title-wrap{margin-bottom:10px;text-align:center}
 .title{
   font-family:'Orbitron',monospace;
@@ -145,7 +138,6 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 }
 .title-sub{font-size:10px;letter-spacing:4px;color:#333;margin-top:6px;font-family:'Rajdhani',sans-serif;font-weight:500}
 
-/* Links row */
 .links{display:flex;gap:10px;align-items:center;margin:28px 0 22px;flex-wrap:wrap;justify-content:center}
 .link{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -156,7 +148,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
   border-radius:10px;
   transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);
   -webkit-tap-highlight-color:transparent;
-  /* 3D */
+
   box-shadow:
     0 1px 0 rgba(255,255,255,0.06) inset,
     0 -1px 0 rgba(0,0,0,0.6) inset,
@@ -183,7 +175,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 .link span{font-family:'Rajdhani',sans-serif;font-size:8px;letter-spacing:2.5px;color:var(--dim);transition:color 0.25s;font-weight:600}
 .link:hover span{color:var(--accent)}
 
-/* Player */
+
 .player{
   display:flex;align-items:center;gap:14px;
   padding:14px 20px;
@@ -211,7 +203,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
   display:flex;align-items:center;justify-content:center;
   transition:all 0.2s;
   -webkit-tap-highlight-color:transparent;
-  /* 3D button */
+
   box-shadow:
     0 1px 0 rgba(255,255,255,0.15) inset,
     0 -1px 0 rgba(0,0,0,0.5) inset,
@@ -243,7 +235,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 .wave.playing span:nth-child(5){animation:wv 1.35s ease-in-out 0.28s infinite}
 @keyframes wv{0%,100%{height:3px;opacity:0.3}50%{height:16px;opacity:1}}
 
-/* ── SUPPORT PAGE ── */
+
 .support-wrap{width:100%;max-width:480px}
 .support-title{
   font-family:'Orbitron',monospace;font-size:11px;letter-spacing:4px;
@@ -291,7 +283,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 .badge-script{color:#9a9a9a;border-color:rgba(120,120,120,0.3);background:rgba(80,80,80,0.08)}
 .badge-executor{color:#aaa;border-color:rgba(180,180,180,0.3);background:rgba(60,60,60,0.1)}
 
-/* hint */
+
 #hint{
   position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
   font-size:8px;letter-spacing:2.5px;color:rgba(255,255,255,0.2);
@@ -300,7 +292,6 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 #hint.show{opacity:1}
 
 
-/* Mobile */
 @media(max-width:480px){
   .tab-btn{padding:8px 14px;font-size:10px}
   .title{font-size:clamp(32px,12vw,60px)}
@@ -310,7 +301,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 }
 @media(max-width:360px){.links{gap:6px}.link{width:62px}}
 
-/* Info button */
+
 .info-btn{
   flex-shrink:0;
   width:26px;height:26px;border-radius:50%;
@@ -336,7 +327,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 }
 .info-btn:active{transform:translateY(1px)}
 
-/* Info overlay */
+
 .info-overlay{
   display:none;position:fixed;inset:0;z-index:200;
   background:rgba(0,0,0,0.85);
@@ -393,15 +384,13 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 <div class="grid-overlay"></div>
 <div class="scanlines"></div>
 
-<!-- SPLASH -->
 <div id="splash">
   <div class="splash-ring"></div>
   <div class="splash-text">INITIALIZING...</div>
 </div>
 
-<!-- APP -->
+
 <div id="app">
-  <!-- NAV -->
   <div id="nav">
     <button class="tab-btn active" data-tab="home" onclick="switchTab('home',this)">
       <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
@@ -413,9 +402,7 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
     </button>
   </div>
 
-  <!-- PAGES -->
   <div id="pages">
-    <!-- HOME -->
     <div class="page active" id="page-home">
       <div class="title-wrap">
         <div class="title">Zottey</div>
@@ -456,7 +443,6 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
       </div>
     </div>
 
-    <!-- SUPPORT -->
     <div class="page" id="page-advertisement">
       <div class="support-wrap">
         <div class="support-title">// ADVERTISEMENTS</div>
@@ -507,14 +493,11 @@ body{font-family:'Share Tech Mono',monospace;color:var(--text)}
 
 
 <script>
-// ── FAVICON ──
 (function(){
   const b64='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';
   const link=document.getElementById('favicon');
   link.href='data:image/jpeg;base64,'+b64;
 })();
-
-// ── STARS / PARTICLES ──
 const canvas=document.getElementById('bg-canvas');
 const ctx=canvas.getContext('2d');
 let W,H,stars=[];
@@ -543,7 +526,6 @@ function drawStars(ts){
 resize();initStars();requestAnimationFrame(drawStars);
 window.addEventListener('resize',()=>{resize();initStars()});
 
-// ── TABS ──
 function switchTab(id,btn){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -551,7 +533,6 @@ function switchTab(id,btn){
   document.getElementById('page-'+id).classList.add('active');
 }
 
-// ── AUDIO ──
 const audio=new Audio('./website');
 audio.loop=true;
 let playing=false;
@@ -584,7 +565,6 @@ playBtn.addEventListener('click',()=>{
   }
 });
 
-// ── INIT ──
 window.addEventListener('load',()=>{
   document.getElementById('app').classList.add('show');
   setTimeout(startPlay,600);
@@ -592,7 +572,6 @@ window.addEventListener('load',()=>{
 });
 </script>
 
-<!-- Info overlay -->
 <div class="info-overlay" id="infoOverlay" onclick="hideInfo(event)">
   <div class="info-box" id="infoBox">
     <button class="info-close" onclick="closeInfo()">×</button>
@@ -611,19 +590,39 @@ const INFO_DATA = {
   onyx: {
     title: 'ONYX',
     badge: 'SCRIPT',
-    desc: 'Onyx is a powerful Roblox script hub packed with premium game scripts. Access a wide library of supported games and features through a clean, modern UI.',
+    desc: 'ONYX
+                  Universal Script
+Anti VCBan
+Animations
+Reanimation (MIC UP)
+Customizable UI
+Animated Custom Tags (Purchasable)
+0 Delay Facebang
+Remote Spy
+Chat Logger
+Audio Logger
+Beginner Friendly
+(Picture, background, border and text completely customizable)
+AND SO MUCH MORE',
     link: 'https://discord.gg/onyxv2'
   },
   novoline: {
     title: 'NOVOLINE',
     badge: 'SCRIPT',
-    desc: 'Novoline is a feature-rich Roblox scripting solution known for its reliability and extensive game support. Trusted by a large community of players.',
+    desc: 'Novoline
+A modern, clean universal script containing all the updated features on any script.
+
+Voice chat bypasser (swearing etc..)
+Reanimation
+
+Spotify Player integrated
+80+ Commands for any game.',
     link: 'https://discord.gg/novo-line'
   },
   opiumware: {
     title: 'OPIUMWARE',
     badge: 'EXECUTOR',
-    desc: 'Opiumware is a capable Roblox executor designed for smooth script execution. Built for performance with support for modern scripts and a growing feature set.',
+    desc: 'Opiumware. A 100% sUNC and 98% UNC macOS Roblox scripting utility. Opiumware is a Roblox executor for macOS that offers comprehensive 100% sUNC and 98% UNC support, meeting industry standards and surpassing other competitors on macOS. Designed for maximum script compatibility and performance, it provides advanced capabilities, including powerful module functions and features for an uninterrupted scripting experience. Opiumware is supported by regular updates and active developers who ensure a reliable experience for script developers and users.',
     link: 'https://discord.gg/opiumware'
   }
 };
